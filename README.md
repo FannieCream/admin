@@ -8,55 +8,55 @@
 admin
   |-- node_modules                  # 依赖包目录
   |-- public                             
-  		|-- img
+  |-- img
   		|-- static       
-  			|-- css                 # 引入外部静态css样式（eg:boostrap.css）
-  			|-- javascript          # 引入外部js文件（eg:vue.js,juery.js）
-  			|-- 其他模板配置文件
+  		|-- css                 # 引入外部静态css样式（eg:boostrap.css）
+  		|-- javascript          # 引入外部js文件（eg:vue.js,juery.js）
+  		|-- 其他模板配置文件
   |-- src  
   		|-- assets
   		|-- components        	 	# 页面组件
-  			|-- admin          			# 管理员页面
-  				|-- show_admin.vue  			# "管理员页面"组件 
-            |-- imcourse         		# 课程导入(import-course)页面
-            	|-- batch.vue           	# "批量导入"组件
-                |-- single.vue              # "逐一导入"组件
-            |-- imstudent         		# 学生导入(import-student)页面
-            	|-- batch.vue           	# "批量导入"组件
-            	|-- single.vue              # "逐一导入"组件
-            	|-- select_class.vue        # "班级选择下拉框"组件
-            |-- mclass           		# 班级管理(manage-class)页面
-            	|-- class.vue           	# "班级列表"组件
-            	|-- student.vue           	# "班级名单"组件
-            |-- mcourse           		# 课程管理(manage-course)页面
-            	|-- checking.vue           	# "课程检索"组件
-            	|-- search.vue           	# "课程考勤"组件
-            |-- mstudent                # 学生管理(manage-student)页面
-            	|-- student.vue           	# "学生信息"组件
-            |-- navbar                  # 导航栏
-            	|-- index.vue           	# "导航栏"组件
-            |-- components              # 培养计划(plan)页面
-            	|-- show_plan.vue           # 页面组件
+  		  |-- admin          			  # 管理员页面
+  				|-- show_admin.vue  	    # "管理员页面"组件 
+        |-- imcourse         		  # 课程导入(import-course)页面
+          |-- batch.vue             # "批量导入"组件
+          |-- single.vue            # "逐一导入"组件
+        |-- imstudent         	  # 学生导入(import-student)页面
+          |-- batch.vue             # "批量导入"组件
+          |-- single.vue            # "逐一导入"组件
+          |-- select_class.vue      # "班级选择下拉框"组件
+        |-- mclass           		  # 班级管理(manage-class)页面
+          |-- class.vue           	# "班级列表"组件
+          |-- student.vue           # "班级名单"组件
+        |-- mcourse           		# 课程管理(manage-course)页面
+          |-- checking.vue          # "课程检索"组件
+         	|-- search.vue           	# "课程考勤"组件
+        |-- mstudent              # 学生管理(manage-student)页面
+          |-- student.vue           	# "学生信息"组件
+        |-- navbar                # 导航栏
+          |-- index.vue           	# "导航栏"组件
+        |-- components            # 培养计划(plan)页面
+          |-- show_plan.vue           # 页面组件
         
-  		|-- router                      # 注册路由
+  		|-- router                # 注册路由
   			|-- index.js               
   		|-- store
   		|-- views
-  			|-- admin.vue               # 管理员页面
-  			|-- data         			# 数据分析页面
-  			|-- home.vue         		# 首页
+  			|-- admin.vue             # 管理员页面
+  			|-- data         			    # 数据分析页面
+  			|-- home.vue         		  # 首页
   			|-- imcourse.vue         	# 课程导入页面
-  			|-- imstudent.vue         	# 学生导入页面
+  			|-- imstudent.vue         # 学生导入页面
   			|-- imcourse.vue         	# 课程导入页面
-  			|-- login.vue         	    # 登录页面
-  			|-- mclass.vue         	    # 班级管理页面
+  			|-- login.vue         	  # 登录页面
+  			|-- mclass.vue         	  # 班级管理页面
   			|-- mcourse.vue         	# 课程管理页面
   			|-- mstudent.vue         	# 学生管理页面
-  			|-- plan.vue                # 培养计划页面
+  			|-- plan.vue              # 培养计划页面
   		|-- App.vue                 
   		|-- main.js
   		|-- registerServiceWorker
-  |-- tests                        # 测试组件
+  |-- tests                    # 测试组件
  
 ```
 
