@@ -1,6 +1,7 @@
 <template>
     <div>
-        <div class="search-class">
+        <studentlist v-show="isChecking" :class="{'active':isCheckingActive}"></studentlist>
+        <div class="search-class" v-show="isSearch" :class="{'active':isSearchActive}">
             <div class="search-text">
                 <p>检索</p>
             </div>
@@ -41,14 +42,14 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr v-for="one in classlist">
+                <tr v-for="(one,index) in classlist">
                     <td>{{one.name}}</td>
                     <td>{{one.description}}</td>
                     <td>{{one.begin}}</td>
                     <td>{{one.end}}</td>
                     <td>{{one.status}}</td>
-                    <td><button class="btn btn-primary">点击</button></td>
-                    <td><button class="btn btn-primary">点击</button></td>
+                    <td><button @click="showChecking" class="btn btn-primary">点击</button></td>
+                    <td><button @click="removeInfo(index)"  class="btn btn-primary">点击</button></td>
                 </tr>
                 </tbody>
             </table>
@@ -58,10 +59,20 @@
 </template>
 
 <script>
+    import studentlist from "./student"
     export default {
         name: "classlist",
+        components: {
+            studentlist
+        },
+
         data(){
             return {
+                isChecking: false,
+                isCheckingActive: false,
+                isSearch: true,
+                isSearchActive: false,
+
                 classlist:[
                     {   name:"青马（1）班", description:"针对17级同学", begin:"19年春季", end:"19年秋季", status:"活跃"   },
                     {   name:"青马（2）班", description:"针对17级同学", begin:"19年秋季", end:"20年春季", status:"不活跃"   },
@@ -69,6 +80,22 @@
                     {   name:"青马（4）班", description:"针对17,18级同学", begin:"20年春季", end:"20年秋季", status:"活跃"   },
                     {   name:"青马（5）班", description:"针对19级同学", begin:"19年春季", end:"19年秋季", status:"不活跃"   }
                 ]
+            }
+        },
+
+        methods:{
+            removeInfo(index){
+                this.classlist.splice(index,1)
+                console.log(index)
+                console.log(this.classlist[index])
+            },
+
+            showChecking: function () {
+                this.isChecking = true
+                this.isCheckingActive = true
+                this.isSearch = false
+                this.isSearchActive = false
+                // this.$refs.mychild
             }
         }
     }

@@ -40,7 +40,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr v-for="stu in studentlist">
+                <tr v-for="(stu,index) in studentlist">
                     <td>{{stu.sname}}</td>
                     <td>{{stu.snumber}}</td>
                     <td>{{stu.grade}}</td>
@@ -49,7 +49,7 @@
                     <td>{{stu.status}}</td>
                     <td>{{stu.finished}}</td>
                     <td>{{stu.absence}}</td>
-                    <td><button type="button" class="btn btn-primary">点击</button></td>
+                    <td><button @click="removeInfo(index)" type="button" class="btn btn-primary">点击</button></td>
                 </tr>
                 </tbody>
             </table>
@@ -69,6 +69,13 @@
                     {sname:"韩梅梅", snumber:"3011", grade:"大三", college:"软件工程", class:"1班", status:1, finished:"1/5", absence:0},
                     {sname:"李华", snumber:"2011", grade:"大一", college:"软件工程", class:"2班", status:3, finished:"3/10", absence:0}
                 ]
+            }
+        },
+        methods:{
+            removeInfo(index){
+                this.studentlist.splice(index,1)
+                console.log(index)
+                console.log(this.studentlist[index])
             }
         }
 

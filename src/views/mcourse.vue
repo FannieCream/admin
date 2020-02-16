@@ -26,7 +26,7 @@
             navbar, search, checking
         },
 
-        el:"#manage-course",
+        // el:"#manage-course",
         data() {
             return {
                 isSearch: true,

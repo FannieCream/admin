@@ -1,8 +1,8 @@
 <template>
     <div id="mcourse">
 <!--        <component :is="checking" ></component>-->
-        <checking v-show="isChecking"></checking>
-        <div class="search" v-show="isSearch">
+        <checking v-show="isChecking" :class="{'active':isCheckingActive}"></checking>
+        <div class="search" v-show="isSearch" :class="{'active':isSearchActive}">
             <div class="search-box">
                 <p>检索</p>
                 <table>
@@ -42,7 +42,6 @@
                 <table class="table table-bordered">
                     <thead>
                     <tr>
-                        <td>选择</td>
                         <td>名称</td>
                         <td>代码</td>
                         <td>老师</td>
@@ -57,7 +56,6 @@
                     </thead>
                     <tbody>
                     <tr v-for="item in courselist">
-                        <td><input type="checkbox" v-model="selected"></td>
                         <td>{{item.cname}}</td>
                         <td>{{item.code}}</td>
                         <td>{{item.teacher}}</td>
@@ -66,7 +64,7 @@
                         <td>{{item.place}}</td>
                         <td>{{item.ctype}}</td>
                         <td>{{item.content}}</td>
-                        <td><button type="button" class="btn btn-primary" @click="showChecking">点击</button></td>
+                        <td><button @click="showChecking" type="button" class="btn btn-primary">点击</button></td>
                         <td><button type="button" class="btn btn-primary">点击</button></td>
                     </tr>
                     </tbody>
@@ -95,7 +93,9 @@
         data() {
             return {
                 isChecking: false,
+                isCheckingActive: false,
                 isSearch: true,
+                isSearchActive: false,
 
                 courselist: [
                     {
@@ -114,15 +114,18 @@
                         cname: "课程4", code: "1004", teacher: "王老师", time: "1.14",
                         district: "中北校区", place: "教书院301", ctype: "选修", content: "这是课程内容描述"
                     }
-                ],
+                ]
 
-                methods: {
-                    showChecking: function () {
-                        this.isChecking = true
-                        this.isSearch = false
-                        // this.$refs.mychild
-                    }
-                }
+            }
+        },
+
+        methods: {
+            showChecking: function () {
+                this.isChecking = true
+                this.isCheckingActive = true
+                this.isSearch = false
+                this.isSearchActive = false
+                // this.$refs.mychild
             }
         }
     }
