@@ -1,6 +1,7 @@
 <template>
     <div>
         <div class="show-class-info">
+            <p>当前班级信息：</p>
             <table>
             <tr>
                 <td>班级信息：{{info}}</td>
@@ -15,7 +16,7 @@
         </div>
 
         <div class="student-info">
-            <table class="table table-bordered">
+            <table class="table table-striped">
                 <thead>
                 <tr>
                     <td>序号</td>
@@ -75,19 +76,63 @@
 
 <style lang="less" scoped>
     .show-class-info {
+        margin-top: 50px;
+
+        p {
+            color: #B22222;
+            margin-right: 500px;
+            font-weight: bold;
+        }
+
         td {
             width: 200px;
             text-align: left;
             padding: 5px;
+        }
 
+        table {
+            text-align: center;
+            margin: 0 auto;
         }
 
     }
 
     .student-info {
-        margin-top: 50px;
+        margin-top: 100px;
         margin-bottom: 50px;
-        text-align: center;
+        /*text-align: center;*/
+
+        table {
+            margin-top: -30px;
+            margin-bottom: 30px;
+
+            thead {
+                color: black;
+                font-weight: bold;
+                font-size: 16px;
+
+                td {
+                    height: 50px;
+                    line-height: 50px;
+                    background-color: #d0e9c6;
+                    border: 1px solid darkgrey;
+                }
+            }
+
+            td {
+                width: 150px;
+                height: 50px;
+                line-height: 50px;
+                padding: 5px;
+                text-align: center;
+                border: 1px solid darkgrey;
+                /*max-width: 30px;*/
+                /*width: 30px;*/
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow:ellipsis;
+            }
+        }
 
     }
 

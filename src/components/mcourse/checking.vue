@@ -1,6 +1,7 @@
 <template>
     <div class="checking">
         <div class="show-course" v-for="item in courselist">
+            <p>当前课程信息：</p>
             <table>
                 <tr>
                     <td>课程名称：{{item.cname}}</td>
@@ -17,7 +18,7 @@
             </table>
         </div>
         <div class="show-student">
-            <table class="table table-bordered">
+            <table class="table table-striped">
                 <thead>
                 <tr>
                     <td>序号</td>
@@ -42,18 +43,6 @@
                 </tbody>
             </table>
 
-<!--            <table class="table2">-->
-<!--                &lt;!&ndash; 分页&ndash;&gt;-->
-<!--                <v-pagination class="num"-->
-<!--                              @page-change="pageChange"-->
-<!--                              @page-size-change="pageSizeChange"-->
-<!--                              :total="total"-->
-<!--                              :page-size="pageSize"-->
-<!--                              :layout="['total', 'prev', 'pager', 'next',-->
-<!--         // 'sizer',-->
-<!--          'jumper']"-->
-<!--                ></v-pagination>-->
-<!--            </table>-->
 
             <button type="button" class="btn btn-default" style="display: inline-block; margin-left: 5%; margin-right: 20%">确认</button>
             <button type="button" class="btn btn-default" style="display: inline-block">导入考勤名单</button>
@@ -67,11 +56,6 @@
         name: "checking",
         data() {
             return {
-
-                pageIndex: 1,
-                pageSize: 2,
-                total: '',
-
                 courselist: [
                     {   cname:"课程1", code:"1001", teacher: "李老师", time:"1.1",
                         district:"中北校区", place:"文史楼101", ctype:"选修", content:"这是课程内容描述" }
@@ -115,22 +99,43 @@
         padding: 5px 30px;
         position: relative;
         left: 40%;
+    }
 
+    .show-course p {
+        color: #B22222;
+        margin-right: 500px;
+        font-weight: bold;
     }
 
     .show-student {
         margin-top: 50px;
         margin-bottom: 50px;
+
+        table{
+            thead {
+                color: black;
+                font-weight: bold;
+                font-size: 16px;
+
+                td {
+                    height: 50px;
+                    line-height: 50px;
+                    background-color: #d0e9c6;
+                    border: 1px solid darkgrey;
+                }
+            }
+
+            td {
+                padding: 5px;
+                text-align: center;
+                border: 1px solid darkgrey;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow:ellipsis;
+            }
+        }
     }
 
-    .show-student table td {
-        max-width: 50px;
-        vertical-align: center;
-        text-align: center;
-        padding: 5px 10px;
-        /*position: relative;*/
-        /*left: 10%;*/
-    }
 
     .active {
         border-bottom: 1px solid black;

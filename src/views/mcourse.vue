@@ -11,7 +11,6 @@
             <search v-show="isSearch"></search>
             <checking v-show="isChecking"></checking>
         </div>
-
     </div>
 
 </template>
@@ -51,8 +50,6 @@
                 this.isCheckingActive = true
             }
 
-
-
         }
     }
 </script>
@@ -65,12 +62,18 @@
         text-align: center;
 
         .active {
-            border-bottom: 1px solid black;
+            border-bottom: 2px solid darkgreen;
+            font-weight: bolder;
+            font-size: 18px;
+            color: darkgreen;
         }
 
         li {
             display: inline-block;
             width:150px;
+            text-align: center;
+            font-size: 16px;
+            color: black;
         }
 
         .mcourse-type {

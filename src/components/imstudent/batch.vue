@@ -1,12 +1,27 @@
 <template>
     <div class="batch">
-       <p>班级选择 <select_class></select_class></p>
+        <table style="margin: 0 auto;width:200px">
+            <tr>
+                <td>班级选择</td>
+                <td><select_class></select_class></td>
+            </tr>
+        </table>
+        <table class="choose-file">
+            <tr>
+                <td>批量导入</td>
+                <td><input type="text" placeholder=" 请输入 ... "></td>
+                <td><input type="file" style="color: transparent;"></td>
+            </tr>
+        </table>
 
-        <p style="text-align: center; width: 100%" >
-            批量导入 <input type="text" placeholder=" 请输入 ... "> 添加文件
-        </p>
 
-        <img src="public/static/imcourse-example.PNG" style="width: 50%;margin-top: 50px">
+<!--        <p style="text-align: center; width: 100%" >-->
+<!--            批量导入 <input type="text" placeholder=" 请输入 ... ">-->
+<!--            <input type="file" style="color: transparent;">-->
+<!--        </p>-->
+
+        <img src="../../assets/imcourse-example.png" style="width: 50%;margin-top: 50px">
+
 
         <p class="note-left">
             {{note1}}
@@ -36,6 +51,20 @@
 </script>
 
 <style lang="less" scoped>
+    .choose-file {
+        position: relative;
+        left:37%;
+
+        td {
+            padding: 5px;
+        }
+
+        input[type=text] {
+            width: 200px;
+            height: 30px;
+        }
+    }
+
     .note-left {
         float: left;
         position: absolute;

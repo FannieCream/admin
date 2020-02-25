@@ -27,7 +27,6 @@
             navbar, batch, single
         },
 
-        el:"#import-course",
         data() {
             return {
                 isBatch: true,
@@ -68,14 +67,18 @@
         margin-bottom: 50px;
 
         .active {
-            border-bottom: 1px solid black;
+            border-bottom: 2px solid darkgreen;
+            font-weight: bolder;
+            font-size: 18px;
+            color: darkgreen;
         }
 
         li {
             display: inline-block;
             width:150px;
             text-align: center;
-
+            font-size: 16px;
+            color: black;
         }
 
 

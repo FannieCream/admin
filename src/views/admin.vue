@@ -24,7 +24,8 @@
     .show-admin {
         position: absolute;
         top:20%;
-        left:30%;
+        width: 100%;
+        /*left:30%;*/
     }
 
 </style>

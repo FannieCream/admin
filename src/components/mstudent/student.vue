@@ -22,10 +22,11 @@
                     <td><input type="text"></td>
                 </tr>
             </table>
-            <button type="submit">确认</button>
+            <button class="btn btn-warning" type="submit">确认</button>
         </div>
+
         <div class="show-student">
-            <table class="table table-bordered">
+            <table class="table table-striped">
                 <thead>
                 <tr>
                     <td>学生</td>
@@ -53,8 +54,8 @@
                 </tr>
                 </tbody>
             </table>
-            <button type="button" class="btn btn-default" style="position: relative; left: 40%">导出</button>
-            <button type="button" class="btn btn-default" style="position: relative; left: 60%">确认</button>
+            <button type="button" class="btn btn-default" style="position: relative; left: 40%; margin-bottom: 50px">导出</button>
+            <button type="button" class="btn btn-default" style="position: relative; left: 60%; margin-bottom: 50px">确认</button>
         </div>
     </div>
 </template>
@@ -84,36 +85,69 @@
 
 <style lang="less" scoped>
     .search-student {
-        border:2px solid red;
+        /*border:2px solid red;*/
+        width: 1000px;
         /*width: 100%;*/
         text-align: center;
+        margin: 50px 0 auto;
+        margin-left: 200px;
 
         p {
             float: left;
-            border:1px solid #2e6da4;
+            /*border:1px solid #2e6da4;*/
+            margin-top: 20px;
+            margin-right: 30px;
+            color: #2e6da4;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        input[type=text] {
+            width: 100px;
+            height: 30px;
+            padding: 0 5px;
         }
 
         button {
             float: right;
-        }
-
-        input {
-            width: 100px;
-        }
-
-        td {
-            padding: 0;
+            margin-right: 50px;
+            margin-top: -30px;
         }
     }
 
     .show-student {
         margin-top: 100px;
-        margin-left: 200px;
 
-        td {
-            padding: 5px 20px;
-            text-align: center;
+        .table-striped {
+            margin-top: -30px;
+            margin-bottom: 30px;
+
+            thead {
+                color: black;
+                font-weight: bold;
+                font-size: 16px;
+
+                td {
+                    height: 50px;
+                    line-height: 50px;
+                    background-color: #d0e9c6;
+                    border: 1px solid darkgrey;
+                }
+            }
+
+            td {
+                width: 150px;
+                height: 50px;
+                line-height: 50px;
+                padding: 5px;
+                text-align: center;
+                border: 1px solid darkgrey;
+                /*max-width: 30px;*/
+                /*width: 30px;*/
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow:ellipsis;
+            }
         }
     }
-
 </style>

@@ -24,12 +24,12 @@
                 </table>
             </div>
             <div class="search-btn">
-                <button type="submit" class="btn btn-default">确认</button>
+                <button type="submit" class="btn btn-warning">确认</button>
             </div>
         </div>
 
         <div class="class-info">
-            <table class="table table-bordered">
+            <table class="table table-striped">
                 <thead>
                 <tr>
                     <td>班级名称</td>
@@ -53,7 +53,7 @@
                 </tr>
                 </tbody>
             </table>
-            <button type="submit" class="btn btn-default">确认</button>
+            <button type="submit" class="btn btn-default" style="margin-top: 50px">确认</button>
         </div>
     </div>
 </template>
@@ -103,35 +103,34 @@
 
 <style lang="less" scoped>
     .search-class {
-        border:2px solid red;
+        /*border:2px solid red;*/
         text-align: center;
+        width: 1000px;
+        margin: 50px 0 auto;
+        /*margin-top: 50px;*/
 
         .search-text {
-            /*float: left;*/
-            /*position: absolute;*/
-            /*top:50%;*/
-            /*left:-20%;*/
-            display: inline-block;
-            margin-right: 50px;
+            /*display: inline-block;*/
+            /*margin-right: 50px;*/
+            margin-left: 300px;
+            float:left;
+            margin-top: 20px;
+            color: #2e6da4;
+            font-size: 16px;
+            font-weight: bold;
         }
 
         .search-table {
             display: inline-block;
-        }
-
-        input {
-            width:100px;
-        }
-
-        td {
             text-align: center;
+
+            input {
+                width:100px;
+                height:30px;
+            }
         }
 
         .search-btn {
-            /*float: right;*/
-            /*position: absolute;*/
-            /*top:50%;*/
-            /*right:-20%;*/
             display: inline-block;
             margin-left: 50px;
         }
@@ -141,6 +140,36 @@
         margin-top: 50px;
         text-align: center;
         margin-bottom: 50px;
+
+        table{
+
+            margin:0 auto ;
+            thead {
+                color: black;
+                font-weight: bold;
+                font-size: 16px;
+
+                td {
+                    /*width: 150px;*/
+                    height: 50px;
+                    line-height: 50px;
+                    background-color: #d0e9c6;
+                    border: 1px solid darkgrey;
+                }
+            }
+
+            td {
+                /*width: 150px;*/
+                padding: 10px;
+                text-align: center;
+                height: 50px;
+                line-height: 50px;
+                border: 1px solid darkgrey;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow:ellipsis;
+            }
+        }
 
     }
 

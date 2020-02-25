@@ -1,6 +1,6 @@
 <template>
     <div class="show-admin">
-        <table class="table table-bordered">
+        <table class="table table-striped">
             <thead>
             <tr>
                 <td>序号</td>
@@ -66,8 +66,8 @@
 <!--        </div> -->
 <!--        </fieldset>-->
 
-        <button @click="addInfo" type="button" class="btn btn-default" >添加</button>
-        <button @click="submitInfo" type="button" class="btn btn-default">确定</button>
+        <button @click="addInfo" type="button" class="btn btn-default" style="margin-bottom: 50px">添加</button>
+        <button @click="submitInfo" type="button" class="btn btn-default" style="margin-bottom: 50px">确定</button>
     </div>
 </template>
 
@@ -123,9 +123,36 @@
     .show-admin {
         text-align: center;
 
-        td {
-            padding: 5px 20px;
-            /*text-align: center;*/
+        table {
+            margin-top: 50px;
+            margin-bottom: 30px;
+
+            thead {
+                color: black;
+                font-weight: bold;
+                font-size: 16px;
+
+                td {
+                    height: 50px;
+                    line-height: 50px;
+                    background-color: #d0e9c6;
+                    border: 1px solid darkgrey;
+                }
+            }
+
+            td {
+                width: 150px;
+                height: 50px;
+                line-height: 50px;
+                padding: 5px;
+                text-align: center;
+                border: 1px solid darkgrey;
+                /*max-width: 30px;*/
+                /*width: 30px;*/
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow:ellipsis;
+            }
         }
     }
 

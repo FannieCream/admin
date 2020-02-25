@@ -22,6 +22,7 @@
     .show-student {
         position: absolute;
         top:20%;
+        width: 100%;
     }
 
 </style>

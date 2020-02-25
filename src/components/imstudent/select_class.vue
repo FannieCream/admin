@@ -33,10 +33,7 @@
         .select {
             /*width:100%;*/
             width: 300px;
-
-            option {
-                width: 200px;
-            }
+            height: 50px;
         }
     }
 

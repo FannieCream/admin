@@ -1,10 +1,17 @@
 <template>
     <div class="batch">
-        <p style="text-align: center; width: 100%" >
-            批量导入 <input type="text" placeholder=" 请输入 ... "> 添加文件
-        </p>
+        <div>
+            <table class="choose-file">
+                <tr>
+                    <td>批量导入</td>
+                    <td><input type="text" placeholder=" 请输入 ... "></td>
+                    <td><input type="file" style="color: transparent;"></td>
+                </tr>
+            </table>
+        </div>
 
-        <img src="public/static/imcourse-example.PNG" style="width: 50%;margin-top: 50px">
+<!--        <img :src="imgURL" style="width: 50%;margin-top: 50px">-->
+        <img src="../../assets/imcourse-example.png" style="width: 50%;margin-top: 50px">
 
         <p class="note-left">
             {{note1}}
@@ -17,6 +24,7 @@
 </template>
 
 <script>
+    // import imgURL from "../../assets/imcourse-example.png"
     export default {
         name: "batch",
         data() {
@@ -48,6 +56,20 @@
         font-size: 14px;
         /*marin-righ: 50px;*/
         /*display: inline-block;*/
+    }
+
+    .choose-file {
+        position: relative;
+        left:37%;
+
+        td {
+            padding: 5px;
+        }
+
+        input[type=text] {
+            width: 200px;
+            height: 30px;
+        }
     }
 
 
